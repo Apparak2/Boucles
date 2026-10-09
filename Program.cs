@@ -27,6 +27,12 @@ class Program
 
 
         // Etape 3 : faire un compteur qui va de -4 à 2
+        etape++;
+        Console.WriteLine($"Étape {etape}: ");
+        for(int i = -4; i<=2; i++)
+        {
+            Console.WriteLine(i);
+        }
 
         // Etape 4 : faire un compteur qui compte 2 par 2 de 0 à 15
 
