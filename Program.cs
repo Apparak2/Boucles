@@ -9,40 +9,61 @@ class Program
          */
 
         // Etape 1 : faire un compteur qui va de 1 à 10
-        int etape = 1;
-        Console.WriteLine($"Étape {etape}: ");
-        for(int i = 1; i<=10; i++)
+        for(int etape = 1; etape<=5; etape++)
         {
-            Console.WriteLine(i);
+            Console.WriteLine($"Étape {etape}: ");
+            switch (etape)
+            {
+                case 1:
+                    for (int i = 1; i <= 10; i++)
+                    {
+                        Console.WriteLine(i);
+                    }
+                break;
+                case 2:
+                    // Etape 2 : faire un décompte qui va de 5 à 1 puis qui dit "Bonne année !"
+                    for (int i = 5; i >= 1; i--)
+                    {
+                        Console.WriteLine(i);
+                    }
+                    Console.WriteLine("Bonne année !");
+                break;
+                case 3:
+                    // Etape 3 : faire un compteur qui va de -4 à 2
+                    for (int i = -4; i <= 2; i++)
+                    {
+                        Console.WriteLine(i);
+                    }
+                break;
+                case 4:
+                    // Etape 4 : faire un compteur qui compte 2 par 2 de 0 à 15
+                    for (int i = 0; i <= 15; i += 2)
+                    {
+                        Console.WriteLine(i);
+                    }
+                break;
+                case 5:
+                    // Etape 5 : faire une boucle qui se répète à chaque fois que l'utilisateur écrit autre chose que "oui"
+                    String UserAnswer = Console.ReadLine();
+                    while (UserAnswer != "oui")
+                    {
+                        Console.WriteLine("Ce n'est pas la bonne chose à écrire");
+                        UserAnswer = Console.ReadLine();
+                    }
+                break;
+            }
         }
+        
+        
 
-        // Etape 2 : faire un décompte qui va de 5 à 1 puis qui dit "Bonne année !"
-        etape++;
-        Console.WriteLine($"Étape {etape}: ");
-        for(int i = 5; i>=1; i--)
-        {
-            Console.WriteLine(i);
-        }
-        Console.WriteLine("Bonne année !");
+        
 
 
-        // Etape 3 : faire un compteur qui va de -4 à 2
-        etape++;
-        Console.WriteLine($"Étape {etape}: ");
-        for(int i = -4; i<=2; i++)
-        {
-            Console.WriteLine(i);
-        }
+       
 
-        // Etape 4 : faire un compteur qui compte 2 par 2 de 0 à 15
-        etape++;
-        Console.WriteLine($"Étape {etape}: ");
-        for(int i = 0; i<=15; i += 2)
-        {
-            Console.WriteLine(i);
-        }
+        
 
-        // Etape 5 : faire une boucle qui se répète à chaque fois que l'utilisateur écrit autre chose que "oui"
+        
 
         /*
          * Après votre dernier commit, faites un push de votre projet pour qu'il soit accessible sur github.com
